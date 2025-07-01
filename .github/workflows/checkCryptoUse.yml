@@ -20,4 +20,4 @@ jobs:
 
       - name: Run custom crypto scan
         run: |
-          python crypto_scan/scan.py
+          python crypto_pattern_scan/scan.py
