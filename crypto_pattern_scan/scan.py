@@ -33,7 +33,7 @@ def main():
                 full_path = os.path.join(root, file)
                 
                 # Normalize and skip the scanner file itself
-                if os.path.normpath(full_path).endswith(os.path.normpath("crypto_scan/scan.py")):
+                if os.path.normpath(full_path).endswith(os.path.normpath("crypto_pattern_scan/scan.py")):
                     continue
 
                 if scan_file(full_path):
