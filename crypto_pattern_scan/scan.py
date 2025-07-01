@@ -31,6 +31,11 @@ def main():
         for file in files:
             if file.endswith(".py"):
                 full_path = os.path.join(root, file)
+                
+                # Normalize and skip the scanner file itself
+                if os.path.normpath(full_path).endswith(os.path.normpath("crypto_scan/scan.py")):
+                    continue
+
                 if scan_file(full_path):
                     has_issues = True
 
@@ -39,6 +44,7 @@ def main():
         sys.exit(1)
     else:
         print("✅ No insecure crypto usage detected.")
+
 
 if __name__ == "__main__":
     main()
