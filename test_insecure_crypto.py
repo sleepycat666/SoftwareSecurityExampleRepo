@@ -1,1 +1,4 @@
-print("Hello, this is secure code as you can see.")
+def encrypt():
+    print("This is insecure!")
+
+encrypt()
